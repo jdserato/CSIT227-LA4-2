@@ -41,6 +41,7 @@ class PersonTest {
         assertThrows(IllegalArgumentException.class, () -> persons.add(new Manager("Jea", -25, 47500)), "Age cannot be negative");
         try {
             persons.add(new Manager("Jea", -25, 47500));
+            assert false : "Should be an exception";
         } catch (IllegalArgumentException e) {
             assertEquals("Age must be non-negative.", e.getMessage());
         }
@@ -53,6 +54,7 @@ class PersonTest {
         assertThrows(IllegalArgumentException.class, () -> persons.add(new Manager("Jea", -25, 47500)), "Age cannot be negative");
         try {
             persons.add(new Manager("Jea", 25, 27500));
+            assert false : "Should be an exception";
         } catch (IllegalArgumentException e) {
             assertEquals("Salary must be greater than or equal to 30000", e.getMessage());
         }
@@ -86,6 +88,7 @@ class PersonTest {
         assertThrows(ClassCastException.class, ()-> Main.assignPM(persons, "Vince", "Jeshiel"));
         try {
             Main.assignPM(persons, "Vince", "Jeshiel");
+            assert false : "Should be an exception";
         } catch (ClassCastException e) {
             assertEquals("Jeshiel is not a manager", e.getMessage());
         }
@@ -101,6 +104,7 @@ class PersonTest {
         assertThrows(NoSuchElementException.class, ()-> Main.assignPM(persons, "Vince", "Scott"));
         try {
             Main.assignPM(persons, "Vince", "Scott");
+            assert false : "Should be an exception";
         } catch (NoSuchElementException e) {
             assertEquals("Scott does not exist", e.getMessage());
         }
@@ -120,6 +124,7 @@ class PersonTest {
         assertThrows(IllegalStateException.class, ()-> Main.assignPM(persons, "Vince", "Claire"));
         try {
             Main.assignPM(persons, "Vince", "Claire");
+            assert false : "Should be an exception";
         } catch (IllegalStateException e) {
             assertEquals("Vince already has a manager: Mary", e.getMessage());
         }
@@ -158,6 +163,7 @@ class PersonTest {
         assertThrows(ClassCastException.class, ()->Main.giveRaise(persons, "Felix", "Jeshiel", 2500));
         try {
             Main.giveRaise(persons, "Felix", "Jeshiel", 2500);
+            assert false : "Should be an exception";
         } catch (ClassCastException e) {
             assertEquals("Felix is not a manager", e.getMessage());
         }
@@ -180,6 +186,7 @@ class PersonTest {
         assertThrows(ClassCastException.class, ()->Main.giveRaise(persons, "Felix", "Jeshiel", 2500));
         try {
             Main.giveRaise(persons, "Claire", "Felix", 2500);
+            assert false : "Should be an exception";
         } catch (ClassCastException e) {
             assertEquals("Felix is not an employee", e.getMessage());
         }
@@ -202,6 +209,7 @@ class PersonTest {
         assertThrows(IllegalArgumentException.class, ()->Main.giveRaise(persons, "Mary", "Jeshiel", -2500));
         try {
             Main.giveRaise(persons, "Mary", "Jeshiel", -2500);
+            assert false : "Should be an exception";
         } catch (IllegalArgumentException e) {
             assertEquals("Raise must be non-negative", e.getMessage());
         }
@@ -226,11 +234,13 @@ class PersonTest {
         assertThrows(NoSuchElementException.class, ()->Main.giveRaise(persons, "Alaera", "Jeshiel", 2500));
         try {
             Main.giveRaise(persons, "Alaera", "Jeshiel", 2500);
+            assert false : "Should be an exception";
         } catch (NoSuchElementException e) {
             assertEquals("Alaera does not exist", e.getMessage());
         }
         try {
             Main.giveRaise(persons, "Claire", "Frieren", 2500);
+            assert false : "Should be an exception";
         } catch (NoSuchElementException e) {
             assertEquals("Frieren does not exist", e.getMessage());
         }
