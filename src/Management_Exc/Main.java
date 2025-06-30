@@ -7,6 +7,28 @@ public class Main {
 
     /**
      * TODO this implementation
+     * Stores the given list of persons to the text "people.csv" in project directory
+     * The first column should be its classification, whether Customer, Developer, Employee, or Manager
+     * The next columns are the following in order -- name, age, salary (if Customer, 0.0)
+     * @param persons the list of persons
+     */
+    public static void storeToFile(List<Person> persons) {
+
+    }
+
+    /**
+     * TODO this implementation
+     * Loads the saved details of people from "people.txt" to the list of persons
+     * The first column is its classification, whether Customer, Developer, Employee, or Manager
+     * The next columns are the following in order -- name, age, salary (if Customer, 0.0)
+     * @param persons the list of persons
+     */
+    public static void retrieveFromFile(List<Person> persons) {
+
+    }
+
+    /**
+     * TODO this implementation
      * @param persons the list of persons
      * @param manager the manager to give the salary
      * @param employee the employee to receive the raise
